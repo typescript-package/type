@@ -1,5 +1,5 @@
 {
-  "name": "@testing-package/type",
+  "name": "@typescript-package/type",
   "version": "1.0.0",
   "author": "wwwdev.io <dev@wwwdev.io>",
   "description": "Utility types to enhance and simplify TypeScript development.",
