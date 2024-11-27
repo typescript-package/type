@@ -9,6 +9,7 @@ export type { Constructor } from './lib/constructor.type';
 export type { Defined } from './lib/defined.type';
 export type { ForEachCallback } from './lib/foreach-callback.type';
 export type { GenericObject } from './lib/generic-object.type';
+export type { MinMax } from './lib/min-max.interface';
 export type { Never } from './lib/never.type';
 export type { NotUndefined } from './lib/not-undefined.type';
 export type { NumberBetween } from './lib/number-between.type';
