@@ -1,7 +1,3 @@
-# Type
-
-Utility types to enhance and simplify TypeScript development.
-
 <a href="https://www.typescriptlang.org/">
   <img
     src="https://raw.githubusercontent.com/typescript-package/core/refs/heads/main/ts-package-barcode-logo-512.png"
