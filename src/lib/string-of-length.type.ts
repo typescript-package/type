@@ -1,5 +1,5 @@
 // Interface.
-import { MinMax } from '../interface/min-max.interface';
+import { MinMax } from './min-max.interface';
 // Type.
 import { AnyString } from './any-string.type';
 /**
