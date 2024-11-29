@@ -118,8 +118,8 @@ MIT © typescript-package ([license][typescript-package-license])
 
 <!-- Package: typescript-package -->
   <!-- npm -->
-  [typescript-package-npm-badge-svg]: https://badge.fury.io/js/%40typescript-package%2Ftype.svg
-  [typescript-package-npm-badge]: https://badge.fury.io/js/%40typescript-package%2Ftype
+  [typescript-package-npm-badge-svg]: https://badge.fury.io/js/@typescript-package%2Ftype.svg
+  [typescript-package-npm-badge]: https://badge.fury.io/js/@typescript-package%2Ftype
 
 <!-- GIT -->
 [git-semver]: http://semver.org/
