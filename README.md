@@ -101,7 +101,7 @@ How do I know when to release 1.0.0?
 
 ## License
 
-MIT © angular-package ([license][typescript-package-license])
+MIT © typescript-package ([license][typescript-package-license])
 
 <!-- This package: typescript-package  -->
   <!-- GitHub: badges -->
