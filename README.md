@@ -39,21 +39,34 @@ import {
   AnyBoolean,
   AnyNumber,
   AnyString,
+  ArrayToObject,
   CallbackPayload,
   Constructor,
   Defined,
+  ExpectType,
+  ExtractInstanceFromKey,
   ForEachCallback,
   GenericObject,
+  InstanceIntersection,
+  InstanceIntersectionFromKey,
+  InstanceOfConstructor,
+  InstanceTupleFromKey,
+  InstanceTypes,
+  IntersectionOfInstances,
+  MinMax,
   Never,
   NotUndefined,
   NumberBetween,
   Primitive,
   Primitives,
-  ResultCallback,,
+  PrototypeOf,
+  ResultCallback,
   StringOfLength,
   Type,
   Types,
-  Undefined
+  Undefined,
+  UnionToIntersection,
+  UnionToTuple
 } from '@typescript-package/type';
 ```
 
@@ -88,7 +101,7 @@ How do I know when to release 1.0.0?
 
 ## License
 
-MIT © angular-package ([license][typescript-package-license])
+MIT © typescript-package ([license][typescript-package-license])
 
 <!-- This package: typescript-package  -->
   <!-- GitHub: badges -->
@@ -105,8 +118,8 @@ MIT © angular-package ([license][typescript-package-license])
 
 <!-- Package: typescript-package -->
   <!-- npm -->
-  [typescript-package-npm-badge-svg]: https://badge.fury.io/js/%40typescript-package%2Ftype.svg
-  [typescript-package-npm-badge]: https://badge.fury.io/js/%40typescript-package%2Ftype
+  [typescript-package-npm-badge-svg]: https://badge.fury.io/js/@typescript-package%2Ftype.svg
+  [typescript-package-npm-badge]: https://badge.fury.io/js/@typescript-package%2Ftype
 
 <!-- GIT -->
 [git-semver]: http://semver.org/
