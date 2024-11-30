@@ -1,10 +1,5 @@
-// Utility type to convert a union type (|) into an intersection type (&)
-// export type UnionToIntersection<U> = 
-// (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) 
-//   ? { [K in keyof I]: I[K] } 
-//   : never;
 /**
- * @description
+ * @description Utility type to convert a union type (|) into an intersection type (&)
  * @export
  * @typedef {UnionToIntersection}
  * @template U
