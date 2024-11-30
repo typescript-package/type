@@ -36,34 +36,49 @@ npm install @typescript-package/type
 
 ```typescript
 import {
+  // Any
   AnyBoolean,
   AnyNumber,
   AnyString,
+
+  // Object.
   ArrayToObject,
-  CallbackPayload,
-  Constructor,
-  Defined,
-  ExpectType,
-  ExtractInstanceFromKey,
-  ForEachCallback,
   GenericObject,
+
+  // Class.
+  Constructor,
+  PrototypeOf,
+
+  // Instance.
+  ExtractInstanceFromKey,
   InstanceIntersection,
   InstanceIntersectionFromKey,
   InstanceOfConstructor,
   InstanceTupleFromKey,
   InstanceTypes,
   IntersectionOfInstances,
+
+  // Primitive.
+  Primitive,
+  PrimitiveNames,
+
+  // Callback.
+  CallbackPayload,
+  ForEachCallback,
+  ResultCallback,
+
+  // String.
+  StringOfLength,
+
+  // Rest.
+  Defined,
+  ExpectType,
   MinMax,
   Never,
   NotUndefined,
   NumberBetween,
-  Primitive,
-  Primitives,
-  PrototypeOf,
-  ResultCallback,
-  StringOfLength,
   Type,
-  Types,
+  TypeNames,
   Undefined,
   UnionToIntersection,
   UnionToTuple

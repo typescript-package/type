@@ -8,7 +8,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "peerDependencies": {},
   "scripts": {
     "prepublishOnly": "npm run pkg && npm run clean",
     "pkg": "npm pkg delete dependencies",
