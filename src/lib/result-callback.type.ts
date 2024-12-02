@@ -1,17 +1,101 @@
- /**
-  * @description Represents a callback function with parameters, the `value` that has been checked, the `result` of this check, and an optional
-  * `payload`.
-  * @param result The check result of a `boolean` type of the given `value`.
-  * @param value The value of the generic type variable Value to check and which the given check `result` applies.
-  * @param payload An optional `object` of a generic type variable `Payload` to provide more data.
-  * @export
-  * @typedef {ResultCallback}
-  * @template [Value=any] A generic type variable `Value` determines `value` parameter type, by default `any`.
-  * @template [Payload=object] Generic type variable `Payload` indicates `payload` parameter type, by default `object`.
-  * @returns The return value is a `boolean` indicating the check result of the given `value`.
-  */
- export type ResultCallback<Value = any, Payload = object> = (
-  result: boolean,
+/**
+ * @description Represents a callback function with parameters, the `value` being processed, the `result` of this processing, an optional
+ * `payload`, and the ability to return a custom value of generic type variable `Return`.
+ * @param result The processed result of generic type variable `Result` type of the given `value`.
+ * @param value The value of the generic type variable `Value` to be processed and which the given `result` applies.
+ * @param payload An optional parameter of a generic type variable `Payload` to provide data - additional context or metadata.
+ * @export
+ * @typedef {ResultCallback}
+ * @template [Value=unknown] Determines `value` parameter type, by default `unknown`.
+ * @template [Result=boolean] Specifies the type of the `result` parameter, indicating the outcome of the processing, by default of the `boolean` type.
+ * @template [Payload=object] Indicates `payload` parameter type, by default `Record<string, unknown>`.
+ * @template [Return=boolean] Specifies the type of the return value of the callback. Defaults to `boolean`.
+ * @returns The returned value is generic type variable `Return` indicating the processing result of the given `value`.
+ */
+export type ResultCallback<
+  Value = unknown,
+  Result = boolean,
+  Payload = Record<string, unknown>,
+  Return = boolean
+> = (
+  result: Result,
   value: Value,
   payload?: Payload
-) => boolean;
+) => Return;
+
+/*
+Result type
+- Validation: boolean
+- Status codes: number
+- Custom outcomes: enum
+*/
+
+/*
+enum Status {
+  Success = "SUCCESS",
+  Error = "ERROR",
+}
+
+const statusCallback: ResultCallback<string, { error: string }, Status> = (
+  result,
+  value,
+  payload
+) => {
+  console.log(`Status: ${result}, Message: ${value}`);
+  if (payload?.error) console.error(`Error: ${payload.error}`);
+  return result === Status.Success;
+};
+
+statusCallback(Status.Success, "Operation completed");
+statusCallback(Status.Error, "Operation failed", { error: "Network issue" });
+*/
+
+/*
+const numericCallback: ResultCallback<string, null, number> = (result, value) => {
+  console.log(`Code: ${result}, Message: ${value}`);
+  return result === 200; // Treat HTTP 200 as success
+};
+
+numericCallback(200, "OK"); // true
+numericCallback(404, "Not Found"); // false
+*/
+
+
+/*
+const asyncCallback: ResultCallback<number, boolean, {}, Promise<string>> = async (
+  result,
+  value
+) => {
+  return result
+    ? Promise.resolve(`Success with value: ${value}`)
+    : Promise.reject(`Failure with value: ${value}`);
+};
+
+asyncCallback(true, 100).then(console.log).catch(console.error);
+// Output: Success with value: 100
+*/
+
+
+/*
+interface ComplexResult {
+  status: "success" | "error";
+  message: string;
+}
+
+const complexCallback: ResultCallback<number, ComplexResult, { retry: boolean }, void> = (
+  result,
+  value,
+  payload
+) => {
+  console.log(`Status: ${result.status}, Message: ${result.message}`);
+  if (payload?.retry) console.log("Retrying...");
+};
+
+complexCallback(
+  { status: "error", message: "Failed to process" },
+  404,
+  { retry: true }
+);
+// Logs: Status: error, Message: Failed to process
+// Logs: Retrying...
+*/
